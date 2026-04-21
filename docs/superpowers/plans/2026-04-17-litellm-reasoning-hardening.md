@@ -94,7 +94,7 @@ Edit `apps/backend/app/config.py`. Add a `reasoning_effort` field in the Server 
 ```python
     # Server Configuration
     host: str = "0.0.0.0"
-    port: int = 8000
+    port: int = 8001
     reload: bool = False
     log_level: Literal["CRITICAL", "ERROR", "WARNING", "INFO", "DEBUG"] = "INFO"
     frontend_base_url: str = "http://localhost:3000"
@@ -132,7 +132,7 @@ Edit `apps/backend/.env.example` inside the Server Configuration block:
 
 ```
 HOST=0.0.0.0
-PORT=8000
+PORT=8001
 # Set RELOAD=true for `uv run app` to auto-reload on file changes (dev only)
 RELOAD=false
 # Reasoning effort for models that support it: minimal | low | medium | high
@@ -808,7 +808,7 @@ Below the Model input field, add:
   </label>
   <select
     id="reasoning-effort"
-    className="w-full rounded-none border border-black bg-canvas font-mono text-sm px-3 py-2 focus:outline-none focus:shadow-[4px_4px_0_0_#000]"
+    className="w-full rounded-none border border-black  font-mono text-sm px-3 py-2 focus:outline-none focus:shadow-[4px_4px_0_0_#000]"
     value={config.reasoning_effort ?? ''}
     onChange={(e) =>
       setConfig({
@@ -884,7 +884,7 @@ Below the existing `model_output` block, add:
     <summary className="cursor-pointer font-mono text-xs uppercase tracking-wider text-neutral-600 hover:text-black">
       Model thinking
     </summary>
-    <pre className="mt-2 whitespace-pre-wrap border border-black bg-canvas p-3 font-mono text-xs">
+    <pre className="mt-2 whitespace-pre-wrap border border-black bg-white p-3 font-mono text-xs">
       {result.reasoning_content}
     </pre>
   </details>
@@ -1021,7 +1021,7 @@ cp .env.example .env  # if you don't already have one
 RELOAD=true uv run app
 ```
 
-Expected: Server starts on :8000 without errors. No `_get_reasoning_effort`-related log lines.
+Expected: Server starts on :8001 without errors. No `_get_reasoning_effort`-related log lines.
 
 - [ ] **Step 2: Run the frontend**
 

@@ -128,7 +128,7 @@ LLM_API_KEY=sk-your-api-key-here
 
 # Keep these as default for local development
 HOST=0.0.0.0
-PORT=8000
+PORT=8001
 FRONTEND_BASE_URL=http://localhost:3000
 CORS_ORIGINS=["http://localhost:3000", "http://127.0.0.1:3000"]
 ```
@@ -150,7 +150,7 @@ RELOAD=true uv run app
 You should see output like:
 
 ```
-INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
 INFO:     Started reloader process
 ```
 
@@ -390,7 +390,7 @@ cd apps/backend
 RELOAD=true uv run app
 
 # Start production server
-uv run uvicorn app.main:app --host 0.0.0.0 --port 8000
+uv run uvicorn app.main:app --host 0.0.0.0 --port 8001
 
 # Install dependencies
 uv sync

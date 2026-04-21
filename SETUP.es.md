@@ -133,7 +133,7 @@ LLM_API_KEY=sk-your-api-key-here
 
 # Mantén estos valores por defecto para desarrollo local
 HOST=0.0.0.0
-PORT=8000
+PORT=8001
 FRONTEND_BASE_URL=http://localhost:3000
 CORS_ORIGINS=["http://localhost:3000", "http://127.0.0.1:3000"]
 ```
@@ -155,7 +155,7 @@ RELOAD=true uv run app
 Deberías ver una salida como:
 
 ```
-INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
 INFO:     Started reloader process
 ```
 
@@ -288,7 +288,7 @@ docker-compose down
 
 - **Las API keys se configuran desde la UI** en <http://localhost:3000/settings> (no mediante archivos `.env`)
 - Los datos se persisten en un volumen de Docker
-- Se exponen los puertos del frontend (3000) y del backend (8000)
+- Se exponen los puertos del frontend (3000) y del backend (8001)
 
 <!-- Nota: La documentación de Docker está pendiente. Por ahora, usa docker-compose.yml como referencia -->
 
@@ -303,9 +303,9 @@ Cuando ambos servidores estén ejecutándose, abre el navegador:
 |-----|-------------|
 | **<http://localhost:3000>** | Aplicación principal (Dashboard) |
 | **<http://localhost:3000/settings>** | Configurar proveedor de IA |
-| **<http://localhost:8000>** | Raíz de la API del backend |
-| **<http://localhost:8000/docs>** | Documentación interactiva de la API |
-| **<http://localhost:8000/health>** | Health check del backend |
+| **<http://localhost:8001>** | Raíz de la API del backend |
+| **<http://localhost:8001/docs>** | Documentación interactiva de la API |
+| **<http://localhost:8001/health>** | Health check del backend |
 
 ### Checklist de primera ejecución
 
@@ -330,7 +330,7 @@ cd apps/backend
 RELOAD=true uv run app
 
 # Iniciar servidor de producción
-uv run uvicorn app.main:app --host 0.0.0.0 --port 8000
+uv run uvicorn app.main:app --host 0.0.0.0 --port 8001
 
 # Instalar dependencias
 uv sync

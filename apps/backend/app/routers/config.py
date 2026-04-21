@@ -43,6 +43,15 @@ from app.database import db
 
 router = APIRouter(prefix="/config", tags=["Configuration"])
 
+@router.get("")
+async def get_basic_config():
+    return {
+        "provider": "deepseek",
+        "model": "deepseek-chat",
+        "language": "en",
+        "available_languages": ["en"]
+    }
+
 
 def _get_config_path() -> Path:
     """Get path to config storage file."""

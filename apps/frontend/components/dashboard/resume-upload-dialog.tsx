@@ -196,14 +196,14 @@ export function ResumeUploadDialog({
           </Button>
         )}
       </DialogTrigger>
-      <DialogContent className="sm:max-w-md bg-background border border-black shadow-sw-lg p-0 gap-0 rounded-none">
+      <DialogContent className="sm:max-w-md bg-white border border-black  p-0 gap-0 rounded-none">
         <DialogHeader className="p-6 border-b border-black bg-white">
           <DialogTitle className="font-serif text-2xl font-bold uppercase tracking-tight">
             {t('dashboard.uploadResume')}
           </DialogTitle>
         </DialogHeader>
 
-        <div className="p-6 bg-background">
+        <div className="p-6 bg-white">
           <div
             className={`
                             relative border-2 border-dashed p-8 text-center transition-all duration-200

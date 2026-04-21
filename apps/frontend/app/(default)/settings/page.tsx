@@ -71,9 +71,9 @@ const PROVIDERS: LLMProvider[] = [
 ];
 
 const SEGMENTED_BUTTON_BASE =
-  'border border-black font-mono transition-all duration-150 ease-out shadow-sw-sm hover:translate-y-[1px] hover:translate-x-[1px] hover:shadow-none disabled:cursor-not-allowed disabled:opacity-50';
-const SEGMENTED_BUTTON_ACTIVE = 'bg-blue-700 text-white border-black hover:bg-blue-800';
-const SEGMENTED_BUTTON_INACTIVE = 'bg-white text-black hover:bg-secondary';
+  'border border-black font-mono transition-all duration-150 ease-out  hover:translate-y-[1px] hover:translate-x-[1px] hover:shadow-none disabled:cursor-not-allowed disabled:opacity-50';
+const SEGMENTED_BUTTON_ACTIVE = 'bg-[#da0007] text-white border-black rounded-4xl';
+const SEGMENTED_BUTTON_INACTIVE = 'bg-white text-black rounded-4xl hover:bg-secondary';
 
 const unwrapCodeBlock = (value?: string | null): string | null => {
   if (!value) return null;
@@ -573,7 +573,7 @@ export default function SettingsPage() {
 
   return (
     <div className="flex flex-col items-center justify-start p-6 md:p-12 min-h-screen overflow-y-auto">
-      <div className="w-full max-w-4xl border border-black bg-background shadow-sw-lg">
+      <div className="w-full max-w-4xl border border-black bg-white ">
         {/* Header */}
         <div className="border-b border-black p-8 bg-white flex justify-between items-start">
           <div>
@@ -1271,47 +1271,7 @@ export default function SettingsPage() {
         </div>
 
         {/* Footer */}
-        <div className="bg-secondary p-4 border-t border-black flex justify-between items-center">
-          <div className="flex items-center gap-2">
-            <Image
-              src="/logo.svg"
-              alt="Resume Matcher"
-              width={20}
-              height={20}
-              className="w-5 h-5"
-            />
-            <span className="font-mono text-xs text-steel-grey">
-              {getVersionString().toUpperCase()}
-            </span>
-          </div>
-          <div className="flex items-center gap-2">
-            {statusLoading ? (
-              <>
-                <Loader2 className="w-3 h-3 animate-spin text-steel-grey" />
-                <span className="font-mono text-xs text-steel-grey">
-                  {t('settings.footer.status.checking')}
-                </span>
-              </>
-            ) : systemStatus ? (
-              <>
-                <div
-                  className={`w-3 h-3 ${systemStatus.status === 'ready' ? 'bg-green-700' : 'bg-amber-500'}`}
-                ></div>
-                <span
-                  className={`font-mono text-xs font-bold ${systemStatus.status === 'ready' ? 'text-green-700' : 'text-amber-600'}`}
-                >
-                  {systemStatus.status === 'ready'
-                    ? t('settings.footer.status.ready')
-                    : t('settings.footer.status.setupRequired')}
-                </span>
-              </>
-            ) : (
-              <span className="font-mono text-xs text-steel-grey">
-                {t('settings.footer.status.offline')}
-              </span>
-            )}
-          </div>
-        </div>
+       
       </div>
 
       <ConfirmDialog

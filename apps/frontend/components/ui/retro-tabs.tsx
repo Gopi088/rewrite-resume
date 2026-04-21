@@ -53,7 +53,7 @@ export const RetroTabs: React.FC<RetroTabsProps> = ({
                 'border-b-white',
               ],
               !isActive &&
-                !isDisabled && ['bg-secondary text-ink-soft hover:bg-[#D8D8D2] hover:text-black'],
+                !isDisabled && ['bg-whitetext-ink-soft hover:bg-[#D8D8D2] hover:text-black'],
               isDisabled && ['bg-paper-tint text-steel-grey cursor-not-allowed opacity-50']
             )}
           >

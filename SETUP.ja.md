@@ -133,7 +133,7 @@ LLM_API_KEY=sk-your-api-key-here
 
 # ローカル開発では既定のままで OK
 HOST=0.0.0.0
-PORT=8000
+PORT=8001
 FRONTEND_BASE_URL=http://localhost:3000
 CORS_ORIGINS=["http://localhost:3000", "http://127.0.0.1:3000"]
 ```
@@ -155,7 +155,7 @@ RELOAD=true uv run app
 次のような出力が表示されます：
 
 ```
-INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
 INFO:     Started reloader process
 ```
 
@@ -288,7 +288,7 @@ docker-compose down
 
 - **API キーは UI から設定**：<http://localhost:3000/settings>（`.env` ではありません）
 - データは Docker volume に永続化されます
-- フロントエンド（3000）とバックエンド（8000）のポートが公開されます
+- フロントエンド（3000）とバックエンド（8001）のポートが公開されます
 
 <!-- 注：Docker ドキュメントは準備中です。現在は docker-compose.yml を参照してください -->
 
@@ -303,9 +303,9 @@ docker-compose down
 |-----|------|
 | **<http://localhost:3000>** | メインアプリ（Dashboard） |
 | **<http://localhost:3000/settings>** | AI プロバイダ設定 |
-| **<http://localhost:8000>** | バックエンド API ルート |
-| **<http://localhost:8000/docs>** | 対話型 API ドキュメント |
-| **<http://localhost:8000/health>** | バックエンドヘルスチェック |
+| **<http://localhost:8001>** | バックエンド API ルート |
+| **<http://localhost:8001/docs>** | 対話型 API ドキュメント |
+| **<http://localhost:8001/health>** | バックエンドヘルスチェック |
 
 ### 初回セットアップチェックリスト
 
@@ -330,7 +330,7 @@ cd apps/backend
 RELOAD=true uv run app
 
 # 本番サーバ
-uv run uvicorn app.main:app --host 0.0.0.0 --port 8000
+uv run uvicorn app.main:app --host 0.0.0.0 --port 8001
 
 # 依存関係のインストール
 uv sync

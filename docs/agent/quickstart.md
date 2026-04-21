@@ -25,7 +25,7 @@ npm install
 ```bash
 # Backend (Terminal 1, from repo root)
 cd apps/backend
-uv run uvicorn app.main:app --reload --port 8000
+uv run uvicorn app.main:app --reload --port 8001
 
 # Frontend (Terminal 2, from repo root)
 cd apps/frontend
@@ -44,7 +44,7 @@ npm run format   # Prettier
 
 ```bash
 cd apps/backend
-uv run uvicorn app.main:app --reload --port 8000
+uv run uvicorn app.main:app --reload --port 8001
 uv run pytest
 ```
 

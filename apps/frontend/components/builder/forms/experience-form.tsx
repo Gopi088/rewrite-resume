@@ -240,7 +240,7 @@ export const ExperienceForm: React.FC<ExperienceFormProps> = ({ data, onChange }
                           variant="ghost"
                           size="sm"
                           onClick={() => handleAddDescription(item.id)}
-                          className="h-6 text-xs text-blue-700 hover:text-blue-800 hover:bg-blue-50"
+                          className="h-6 text-xs text-black hover:text-[#da0007] hover:bg-blue-50"
                         >
                           <Plus className="w-3 h-3 mr-1" />{' '}
                           {t('builder.genericItemForm.actions.addPoint')}

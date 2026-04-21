@@ -45,7 +45,7 @@ export const TemplateSelector: React.FC<TemplateSelectorProps> = ({ value, onCha
           className={`group flex flex-col items-center p-3 border-2 transition-all ${
             value === template.id
               ? 'border-blue-700 bg-white shadow-[3px_3px_0px_0px_#1D4ED8]'
-              : 'border-black bg-white hover:bg-background hover:shadow-sw-sm'
+              : 'border-black bg-white hover:bg-white hover:shadow-sw-sm'
           }`}
           title={templateLabels[template.id].description}
         >
@@ -80,9 +80,9 @@ interface TemplateThumbnailProps {
 }
 
 export const TemplateThumbnail: React.FC<TemplateThumbnailProps> = ({ type, isActive }) => {
-  const lineColor = isActive ? 'bg-blue-700' : 'bg-steel-grey';
-  const borderColor = isActive ? 'border-blue-700' : 'border-steel-grey';
-  const accentColor = isActive ? 'bg-blue-600' : 'bg-blue-400';
+  const lineColor = isActive ? 'bg-[#da0007]' : 'bg-steel-grey';
+  const borderColor = isActive ? 'border-[#da0007]' : 'border-steel-grey';
+  const accentColor = isActive ? 'bg-[#da0007]' : 'bg-blue-400';
 
   if (type === 'swiss-single') {
     // Single column thumbnail

@@ -357,7 +357,7 @@ export default function DashboardPage() {
               trigger={
                 <Card
                   variant="interactive"
-                  className="aspect-square h-full hover:bg-primary hover:text-canvas"
+                  className="aspect-square h-full hover:bg-[#da0007] hover:text-canvas"
                 >
                   <div className="flex-1 flex flex-col justify-between pointer-events-none">
                     <div className="w-14 h-14 border-2 border-current flex items-center justify-center mb-4">
@@ -386,7 +386,7 @@ export default function DashboardPage() {
           >
             <div className="flex-1 flex flex-col h-full">
               <div className="flex justify-between items-start mb-6">
-                <div className="w-16 h-16 border-2 border-black bg-blue-700 text-white flex items-center justify-center">
+                <div className="w-16 h-16 border-2 border-black bg-[#da0007] text-white flex items-center justify-center">
                   <span className="font-mono font-bold text-lg">M</span>
                 </div>
                 <div className="flex gap-1">
@@ -412,8 +412,8 @@ export default function DashboardPage() {
                 </div>
               </div>
 
-              <CardTitle className="text-lg group-hover:text-primary">
-                {t('dashboard.masterResume')}
+              <CardTitle className="text-lg ">
+                {t('My Resume')}
               </CardTitle>
 
               <div
@@ -460,7 +460,7 @@ export default function DashboardPage() {
             <Card
               key={resume.resume_id}
               variant="interactive"
-              className="aspect-square h-full bg-canvas"
+              className="aspect-square h-full bg-white"
               onClick={() => router.push(`/resumes/${resume.resume_id}`)}
             >
               <div className="flex-1 flex flex-col">
@@ -496,11 +496,11 @@ export default function DashboardPage() {
             <Button
               onClick={() => router.push('/tailor')}
               disabled={!isTailorEnabled}
-              className="w-20 h-20 bg-blue-700 text-white border-2 border-black shadow-sw-default hover:bg-blue-800 hover:translate-y-[2px] hover:translate-x-[2px] hover:shadow-none transition-all rounded-none"
+              className="w-20 h-20 bg-[#da0007]/70 text-white border-2 border-black  hover:bg-[#da0007] hover:translate-y-[2px] hover:translate-x-[2px] hover:shadow-none transition-all rounded-none"
             >
               <Plus className="w-8 h-8" />
             </Button>
-            <p className="text-xs font-mono mt-4 uppercase text-green-700">
+            <p className="text-xs font-mono mt-4 uppercase text-[#181818]">
               {t('dashboard.createResume')}
             </p>
           </div>
@@ -512,7 +512,7 @@ export default function DashboardPage() {
             key={`filler-${index}`}
             variant="ghost"
             noPadding
-            className="hidden md:block bg-canvas aspect-square h-full opacity-50 pointer-events-none"
+            className="hidden md:block bg-white aspect-square h-full opacity-50 pointer-events-none"
           />
         ))}
 

@@ -215,7 +215,7 @@ export default function ResumeViewerPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center bg-background">
+      <div className="min-h-screen flex flex-col items-center justify-center bg-white">
         <Loader2 className="w-10 h-10 animate-spin text-blue-700 mb-4" />
         <p className="font-mono text-sm font-bold uppercase text-blue-700">
           {t('resumeViewer.loading')}
@@ -229,7 +229,7 @@ export default function ResumeViewerPage() {
     const isFailed = processingStatus === 'failed';
 
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center bg-background p-4">
+      <div className="min-h-screen flex flex-col items-center justify-center bg-white p-4">
         <div
           className={`border p-6 text-center max-w-md shadow-sw-default ${
             isProcessing
@@ -283,7 +283,7 @@ export default function ResumeViewerPage() {
   }
 
   return (
-    <div className="min-h-screen bg-background py-12 px-4 md:px-8 overflow-y-auto">
+    <div className="min-h-screen bg-white py-12 px-4 md:px-8 overflow-y-auto">
       <div className="max-w-7xl mx-auto">
         {/* Header Actions */}
         <div className="mb-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 no-print">
@@ -348,7 +348,7 @@ export default function ResumeViewerPage() {
 
         {/* Resume Viewer */}
         <div className="flex justify-center pb-4">
-          <div className="resume-print w-full max-w-[250mm] shadow-sw-lg border-2 border-black bg-white">
+          <div className="resume-print w-full max-w-[250mm] border-2 border-black bg-white">
             <Resume
               resumeData={localizedResumeData || resumeData}
               additionalSectionLabels={{

@@ -12,7 +12,7 @@ BOLD='\033[1m'
 
 # Internal port configuration for single-port deployment.
 FRONTEND_PORT="3000"
-BACKEND_PORT="8000"
+BACKEND_PORT="8001"
 
 # Print banner
 print_banner() {

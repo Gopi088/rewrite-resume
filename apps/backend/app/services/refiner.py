@@ -2,7 +2,7 @@
 
 This module provides functionality to refine an initially tailored resume through
 multiple passes:
-1. Keyword injection - add missing JD keywords where supported by master resume
+1. Keyword injection - add missing JD keywords where supported by 
 2. AI phrase removal - replace AI-generated buzzwords with simpler alternatives
 3. Master alignment validation - ensure no fabricated content was added
 """

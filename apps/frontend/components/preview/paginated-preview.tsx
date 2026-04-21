@@ -108,7 +108,7 @@ export function PaginatedPreview({ resumeData, settings }: PaginatedPreviewProps
   return (
     <div className="flex flex-col h-full overflow-hidden">
       {/* Controls bar */}
-      <div className="flex items-center justify-between px-4 py-2 border-b border-steel-grey bg-secondary shrink-0">
+      <div className="flex items-center justify-between px-4 py-2 border-b border-steel-grey bg-whiteshrink-0">
         <div className="flex items-center gap-2">
           {/* Zoom controls */}
           <Button
@@ -165,7 +165,7 @@ export function PaginatedPreview({ resumeData, settings }: PaginatedPreviewProps
       </div>
 
       {/* Scrollable preview area */}
-      <div ref={containerRef} className="flex-1 overflow-auto bg-[#D5D5D0] p-6">
+      <div ref={containerRef} className="flex-1 overflow-auto bg-white p-6">
         {/* Hidden measurement container - renders content at actual size */}
         <div
           ref={measurementRef}

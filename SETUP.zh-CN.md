@@ -133,7 +133,7 @@ LLM_API_KEY=sk-your-api-key-here
 
 # 本地开发建议保持默认
 HOST=0.0.0.0
-PORT=8000
+PORT=8001
 FRONTEND_BASE_URL=http://localhost:3000
 CORS_ORIGINS=["http://localhost:3000", "http://127.0.0.1:3000"]
 ```
@@ -155,7 +155,7 @@ RELOAD=true uv run app
 你会看到类似输出：
 
 ```
-INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
 INFO:     Started reloader process
 ```
 
@@ -288,7 +288,7 @@ docker-compose down
 
 - **API Key 通过 UI 配置**：<http://localhost:3000/settings>（不是通过 `.env` 文件）
 - 数据会保存在 Docker volume 中
-- 暴露前端（3000）与后端（8000）端口
+- 暴露前端（3000）与后端（8001）端口
 
 <!-- 注意：Docker 文档正在编写中。目前请参考 docker-compose.yml -->
 
@@ -303,9 +303,9 @@ docker-compose down
 |-----|------|
 | **<http://localhost:3000>** | 主应用（Dashboard） |
 | **<http://localhost:3000/settings>** | 配置 AI 提供商 |
-| **<http://localhost:8000>** | 后端 API 根路径 |
-| **<http://localhost:8000/docs>** | 可交互的 API 文档 |
-| **<http://localhost:8000/health>** | 后端健康检查 |
+| **<http://localhost:8001>** | 后端 API 根路径 |
+| **<http://localhost:8001/docs>** | 可交互的 API 文档 |
+| **<http://localhost:8001/health>** | 后端健康检查 |
 
 ### 首次配置检查清单
 
@@ -330,7 +330,7 @@ cd apps/backend
 RELOAD=true uv run app
 
 # 启动生产服务器
-uv run uvicorn app.main:app --host 0.0.0.0 --port 8000
+uv run uvicorn app.main:app --host 0.0.0.0 --port 8001
 
 # 安装依赖
 uv sync

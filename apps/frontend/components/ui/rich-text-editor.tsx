@@ -137,7 +137,7 @@ export const RichTextEditor: React.FC<RichTextEditorProps> = ({
   if (!isMounted) {
     return (
       <div className={cn('space-y-1', className)}>
-        <div className="flex items-center gap-1 p-1 border border-black bg-secondary h-9" />
+        <div className="flex items-center gap-1 p-1 border border-black bg-whiteh-9" />
         <div
           className={cn(
             'w-full border border-black bg-white',

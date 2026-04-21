@@ -85,7 +85,7 @@ except Exception as e:
 ```bash
 cd apps/backend
 cp .env.example .env
-uv run uvicorn app.main:app --reload --port 8000
+uv run uvicorn app.main:app --reload --port 8001
 ```
 
 ## Adding New Endpoints

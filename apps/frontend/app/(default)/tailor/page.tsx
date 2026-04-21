@@ -322,8 +322,8 @@ export default function TailorPage() {
   };
 
   return (
-    <div className="min-h-screen w-full bg-[#F6F5EE] flex flex-col items-center justify-center p-4 md:p-8 font-sans">
-      <div className="w-full max-w-4xl bg-white border border-black shadow-sw-lg p-8 md:p-12 lg:p-14 relative">
+    <div className="min-h-screen w-full bg-white flex flex-col items-center justify-center p-4 md:p-8 font-sans">
+      <div className="w-full max-w-4xl bg-white border border-black  p-8 md:p-12 lg:p-14 relative">
         {/* Back Button */}
         <Button variant="link" className="absolute top-4 left-4" onClick={() => router.back()}>
           <ArrowLeft className="w-4 h-4" />
@@ -334,7 +334,7 @@ export default function TailorPage() {
           <h1 className="font-serif text-4xl font-bold uppercase tracking-tight mb-2">
             {t('tailor.heroTitle')}
           </h1>
-          <p className="font-mono text-sm text-blue-700 font-bold uppercase">
+          <p className="font-mono text-sm text-[#da0007] font-bold uppercase">
             {'// '}
             {t('tailor.pasteJobDescriptionBelow')}
           </p>
@@ -406,7 +406,7 @@ export default function TailorPage() {
           <div className="relative">
             <Textarea
               placeholder={t('tailor.jobDescriptionPlaceholder')}
-              className="min-h-[300px] font-mono text-sm bg-background border-2 border-black focus:ring-0 focus:border-blue-700 resize-none p-4 rounded-none"
+              className="min-h-[300px] font-mono text-sm bg-white border-2 border-black focus:ring-0 focus:border-black resize-none p-4 rounded-none"
               value={jobDescription}
               onChange={(e) => setJobDescription(e.target.value)}
               onKeyDown={handleTextareaKeyDown}

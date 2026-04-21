@@ -79,10 +79,11 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       // PRIMARY - Hyper Blue (#1D4ED8 / blue-700)
       // Use for: Save, Submit, Create, Primary CTA
       default: cn(
-        'bg-blue-700 text-white',
-        'border border-black',
-        'shadow-sw-sm',
-        'hover:bg-blue-800',
+        'bg-[#da0007] text-white',
+        'border border-white',
+        
+        'rounded-2xl',
+        'hover:bg-[#da0007] hover:shadow-none',
         'hover:translate-y-[1px] hover:translate-x-[1px] hover:shadow-none',
         'active:translate-y-[2px] active:translate-x-[2px]'
       ),
@@ -90,9 +91,9 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       // DESTRUCTIVE - Alert Red (#DC2626 / red-600)
       // Use for: Delete, Remove, Destroy, Dangerous actions
       destructive: cn(
-        'bg-red-600 text-white',
-        'border border-black',
-        'shadow-sw-sm',
+        'bg-[#da0007] text-white',
+        'border border-[#da0007]',
+        'rounded-2xl',
         'hover:bg-red-700',
         'hover:translate-y-[1px] hover:translate-x-[1px] hover:shadow-none',
         'active:translate-y-[2px] active:translate-x-[2px]'
@@ -101,10 +102,10 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       // SUCCESS - Signal Green (#15803D / green-700)
       // Use for: Download, Confirm, Complete, Positive actions
       success: cn(
-        'bg-green-700 text-white',
-        'border border-black',
-        'shadow-sw-sm',
-        'hover:bg-green-800',
+        'bg-[#da0007] text-white',
+        'border border-[#da0007]',
+        'rounded-2xl',
+        'hover:bg-[#da0007] hover:shadow-none',
         'hover:translate-y-[1px] hover:translate-x-[1px] hover:shadow-none',
         'active:translate-y-[2px] active:translate-x-[2px]'
       ),
@@ -112,10 +113,10 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       // WARNING - Alert Orange (#F97316 / orange-500)
       // Use for: Reset, Clear, Undo, Caution actions
       warning: cn(
-        'bg-orange-500 text-white',
-        'border border-black',
-        'shadow-sw-sm',
-        'hover:bg-orange-600',
+        'bg-[#da0007] text-white',
+        'border border-[#da0007]',
+        'rounded-2xl',
+        'hover:bg-[#da0007] hover:shadow-none',
         'hover:translate-y-[1px] hover:translate-x-[1px] hover:shadow-none',
         'active:translate-y-[2px] active:translate-x-[2px]'
       ),
@@ -123,9 +124,10 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       // OUTLINE - Canvas background with black border
       // Use for: Cancel, Back, Secondary actions, Navigation
       outline: cn(
-        'bg-background text-black',
-        'border border-black',
-        'shadow-sw-sm',
+        'bg-white text-black',
+        'border border-black/50',
+        
+        'rounded-2xl',
         'hover:bg-secondary',
         'hover:translate-y-[1px] hover:translate-x-[1px] hover:shadow-none',
         'active:translate-y-[2px] active:translate-x-[2px]'
@@ -134,7 +136,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       // SECONDARY - Panel Grey (#E5E5E0)
       // Use for: Less prominent actions, Toolbar buttons
       secondary: cn(
-        'bg-secondary text-black',
+        'bg-white text-black',
         'border border-black',
         'shadow-sw-sm',
         'hover:bg-[#D8D8D2]',
@@ -154,7 +156,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       // LINK - Text only with underline
       // Use for: Inline links, Text navigation
       link: cn(
-        'bg-transparent text-blue-700',
+        'bg-transparent text-[#da0007]',
         'border-none shadow-none',
         'underline-offset-4 hover:underline',
         'p-0 h-auto'

@@ -40,7 +40,7 @@ Before exploring code, read [docs/agent/README.md](../docs/agent/README.md) for 
 # Backend (from repo root)
 cd apps/backend
 uv sync                                              # Install Python dependencies
-uv run uvicorn app.main:app --reload --port 8000     # FastAPI on :8000
+uv run uvicorn app.main:app --reload --port 8001     # FastAPI on :8001
 
 # Frontend (from repo root, in a separate terminal)
 cd apps/frontend

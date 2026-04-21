@@ -603,11 +603,11 @@ const ResumeBuilderContent = () => {
   };
 
   return (
-    <div className="h-screen w-full bg-background flex justify-center items-center p-4 md:p-8">
+    <div className="h-screen w-full bg-white flex justify-center items-center p-4 md:p-8">
       {/* Main Container */}
-      <div className="w-full h-full max-w-[90%] md:max-w-[95%] xl:max-w-[1800px] border border-black bg-background shadow-sw-lg flex flex-col">
+      <div className="w-full h-full max-w-[90%] md:max-w-[95%] xl:max-w-[1800px] border border-black bg-background  flex flex-col">
         {/* Header Section */}
-        <div className="border-b border-black p-6 md:p-8 bg-background no-print">
+        <div className="border-b border-black p-6 md:p-8 bg-white no-print">
           {/* Top Row: Back button and Actions */}
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
             <div>
@@ -623,10 +623,10 @@ const ResumeBuilderContent = () => {
                 {t('nav.builder')}
               </h1>
               <div className="mt-3 flex items-center gap-3">
-                <p className="text-sm font-mono text-blue-700 uppercase tracking-wide font-bold">
+                {/* <p className="text-sm font-mono text-blue-700 uppercase tracking-wide font-bold">
                   {'// '}
                   {resumeId ? t('builder.editMode') : t('builder.createAndPreview')}
-                </p>
+                </p> */}
                 {hasUnsavedChanges && (
                   <span className="flex items-center gap-1 text-xs font-mono text-amber-600 bg-amber-50 px-2 py-1 border border-amber-200">
                     <AlertTriangle className="w-3 h-3" />
@@ -740,10 +740,10 @@ const ResumeBuilderContent = () => {
         {/* Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 bg-black gap-[1px] flex-1 min-h-0">
           {/* Left Panel: Editor */}
-          <div className="bg-background p-6 md:p-8 overflow-y-auto no-print">
+          <div className="bg-white p-6 md:p-8 overflow-y-auto no-print">
             <div className="max-w-3xl mx-auto space-y-6">
               <div className="flex items-center gap-2 border-b-2 border-black pb-2">
-                <div className="w-3 h-3 bg-blue-700"></div>
+                <div className="w-3 h-3 bg-[#da0007]"></div>
                 <h2 className="font-mono text-lg font-bold uppercase tracking-wider">
                   {activeTab === 'resume' && t('builder.leftPanel.editorPanel')}
                   {activeTab === 'cover-letter' && t('builder.leftPanel.coverLetterEditor')}
@@ -848,9 +848,9 @@ const ResumeBuilderContent = () => {
           </div>
 
           {/* Right Panel: Preview with Tabs */}
-          <div className="bg-secondary overflow-hidden flex flex-col no-print">
+          <div className="bg-white overflow-hidden flex flex-col no-print">
             {/* Tabs Header */}
-            <div className="px-6 pt-3 shrink-0 bg-secondary">
+            <div className="px-6 pt-3 shrink-0 bg-white">
               <RetroTabs
                 tabs={[
                   { id: 'resume', label: t('builder.previewTabs.resume') },
@@ -928,20 +928,14 @@ const ResumeBuilderContent = () => {
         </div>
 
         {/* Footer */}
-        <div className="p-4 bg-background flex justify-between items-center font-mono text-xs text-blue-700 border-t border-black no-print">
+        <div className="p-4 bg-white flex justify-between items-center font-mono text-xs text-black border-t border-black no-print">
           <span className="uppercase font-bold flex items-center gap-2">
-            <Image
-              src="/logo.svg"
-              alt="Resume Matcher"
-              width={20}
-              height={20}
-              className="w-5 h-5"
-            />
+            
             {t('builder.footer.moduleLabel')}
           </span>
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-green-700"></div>
+              <div className="w-2 h-2 bg-[#da0007]"></div>
               <span className="uppercase">
                 {templateSettings.template === 'swiss-single' ||
                 templateSettings.template === 'modern'
